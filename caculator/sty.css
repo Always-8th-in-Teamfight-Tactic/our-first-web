@@ -1,0 +1,192 @@
+body {
+    background-image: url(../our-first-web/img/bg.webp);
+    background-repeat: no-repeat;
+    background-color: rgb(26, 32, 43);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+}
+
+h3 {
+    font-family: fantasy;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+}
+
+#show input {
+    width: 530px;
+    height: 80px;
+    font-size: 30px;
+}
+
+#cuttom input {
+    margin: 3px;
+    width: 100px;
+    height: 110px;
+    font-size: 28px;
+}
+
+#cuttom input:hover {
+    background: lightgray;
+}
+
+.caculator {
+    padding: 5px;
+    width: 550px;
+    height: 720px;
+    border: 5px solid #dedede;
+    -moz-border-radius: 120px;
+    /* Gecko browsers */
+    -webkit-border-radius: 300px;
+    /* Webkit browsers */
+    border-radius: 60px;
+    /* W3C syntax */
+    transform: translate(40%, 5%);
+}
+
+input {
+    padding: 1px;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #dedede;
+    -moz-border-radius: 100px;
+    /* Gecko browsers */
+    -webkit-border-radius: 100px;
+    /* Webkit browsers */
+    border-radius: 15px;
+    /* W3C syntax */
+}
+
+input:hover {
+    color: var(--primary-color);
+    border-color: currentColor;
+    transition: .1s;
+
+}
+
+input:active::after {
+    box-shadow: 0 0 0 6px var(--primary-color);
+    opacity: 0;
+}
+
+/* 消除内外边距 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 消除列表的小点 */
+
+
+
+li {
+    list-style: none;
+
+}
+
+a {
+    /* 行内元素转块内元素 */
+    display: block;
+    /* 去除超链接下划线 */
+    text-decoration: none;
+    /* 字体颜色 */
+    color: rgb(249, 249, 249);
+    /* 使用内边距撑开盒子，以便适应不同字数的菜单项 */
+    padding: 20px 15px;
+    /* 设置字体大小 */
+    font-size: 14px;
+    /* 设置背景颜色 */
+    text-align: center;
+
+    -moz-border-radius: 100px;
+    /* Gecko browsers */
+    -webkit-border-radius: 100px;
+    /* Webkit browsers */
+    border-radius: 15px;
+    /* W3C syntax */
+    background-color: rgba(218, 239, 246, 0.5);
+
+}
+
+/* 设置鼠标经过时的样式 */
+
+a:hover {
+    background-color: rgb(195, 223, 247);
+    /* 使用动画为字体添加动态变化的阴影 */
+    color: rgb(249, 249, 249);
+    animation: shadow 1s linear 0s infinite alternate;
+}
+
+/* 最外层盒子设置高度和上边距 */
+
+.div_nav {
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    display: flex;
+    background-color: rgb(63, 62, 62);
+    opacity: 0.5;
+
+}
+
+/* 一级菜单项设置向左浮动 */
+
+.div_nav>ul>li {
+    margin: 5px;
+    height: 90px;
+    width: 200px;
+}
+
+/* 菜单项居中显示 */
+
+.div_nav>ul {
+    width: 1200px;
+    height: 100%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-5%);
+    display: flex;
+}
+
+/* 隐藏二级菜单 */
+
+.second {
+    display: none;
+}
+
+/* 鼠标经过时显示二级菜单 */
+
+.div_nav>ul>li:hover .second {
+    display: block;
+    transition: .2s;
+}
+
+
+
+/* 字体阴影的动画设计 */
+
+@keyframes shadow {
+    0% {
+        color: black;
+        text-shadow: 0px 0px 0px rgba(44, 44, 44, 0.689);
+    }
+
+    100% {
+        color: rgb(86, 88, 88);
+        text-shadow: 0px 0px 20px rgb(135, 103, 40);
+    }
+}
+
+#title {
+    transform: translate(0px, -400px);
+    position: absolute;
+}
+
+.top {
+    width: 300px;
+}

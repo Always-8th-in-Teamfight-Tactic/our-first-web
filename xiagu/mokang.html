@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>网页版计算器</title>
+    <link rel="stylesheet" href="sty.css">
+    <script type="text/javascript">
+        function $(id) { return document.getElementById(id); }
+        var str1;
+        var str2;
+        var result;
+
+        function display(str10)	//显示到文本框
+        {
+            str1 = document.getElementById("text");
+            str1.value = str1.value + str10;
+        }
+        function equals()	//等于
+        {
+            str1 = document.getElementById("text");
+            str2 = document.getElementById("output");
+            result = eval(str1.value);
+            if (result < 0) {
+                str2.value = "输入值无效"
+            } else {
+                str2.value = (result * 100) / (result + 100);
+                result = str2.value;
+                result = Math.round(result);
+                str2.value = result
+            }
+        }
+        function reset()	//清除
+        {
+            str1 = document.getElementById("text");
+            str2 = document.getElementById("output");
+            str1.value = "";
+            str2.value = "";
+        }
+    </script>
+    <style>
+        h3 {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="calculator" class="caculator">
+        <div id="head">
+            <h3>魔抗与魔法伤减百分比转换</h3>
+        </div><br>
+
+        <div id="show" align="center" class="shuru"><input type="text" id="text" class="in">
+            <img src="img/mokang.png" class="tubiao"><span class="eql">
+                魔抗值</span>
+            <span class="eql">
+                =</span>
+            <input type="text" id="output" class="in">
+            <span class="eql"> %魔法伤害减免</span>
+
+        </div>
+        <div id="bu"><span><input type="button" value="重置" onclick="reset()" class="butt"></span>
+            <span><input type="button" value="转换" onclick="equals()" class="butt"></span>
+        </div>
+        <div id="box">
+            <span><img src="img/gongluezhongxin.png" class="li"><a
+                    href="https://101.qq.com/#/hero-rank-5v5?tier=200&queue=420" id="link">官方攻略中心</a></span>
+            <span><img src="img/dalu.png" class="li"><a href="https://yz.lol.qq.com/zh_CN/map/index.html"
+                    id="link">英雄联盟宇宙</a></span>
+            <span><img src="img/kasading.webp" class="li"><a
+                    href="https://www.bilibili.com/video/BV13U4y1q7Ub/?spm_id_from=333.337.search-card.all.click&vd_source=3de283aa4ac0e9052bae5e4715ebe33a"
+                    id="link">布锅锅的神奇百宝袋</a></span>
+
+            <span><img src="img/wei.webp" class="li"><a
+                    href="https://www.bilibili.com/video/BV11U4y1g7dw/?spm_id_from=333.337.search-card.all.click&vd_source=3de283aa4ac0e9052bae5e4715ebe33a"
+                    id="link">进击的二次元</a></span>
+
+        </div>
+
+
+        <div id="title"><img src="img/logo-public.png" class="top"></div>
+        <div class="div_nav">
+            <ul>
+                <li>
+                    <a href="../caculator/page.html">标准计算器</a>
+                </li>
+                <li>
+                    <a href="../xiagu/hujia.html">召唤师峡谷</a>
+                    <ul class="second">
+                        <li><a href="../xiagu/hujia.html">护甲转换</a></li>
+                        <li><a href="../xiagu/mokang.html">魔抗转换</a></li>
+                        <li><a href="../xiagu/jinengjisu.html">技能极速转换</a></li>
+                        <li><a href="../xiagu/shuxing.html">装备面板属性价值</a></li>
+                        <li><a href="../xiagu/nanqiang.html">打野脏兵指南</a></li>
+                        <li><a href="../sudu/yidong.html">移动速度</a></li>
+                        <li><a href="../sudu/gongsu.html">攻击速度</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">云顶之弈</a>
+                    <ul class="second">
+                        <li><a href="../yunding/faqiu.html">法球价值</a></li>
+                        <li><a href="../yunding/kouxue.html">小小英雄血量损失</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../firstpage.html">返回主页面</a>
+                </li>
+            </ul>
+        </div>
+</body>
+
+</html>
