@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>网页版计算器</title>
+    <link rel="stylesheet" href="sty.css">
+    <script type="text/javascript">
+        function $(id) { return document.getElementById(id); }
+        var str = [];
+        var result = 0;
+
+        function equals()	//等于
+        {
+            str[0] = document.getElementById("output");
+            str[1] = document.getElementById("text1");
+            str[2] = document.getElementById("text2");
+            str[3] = document.getElementById("text3");
+            str[4] = document.getElementById("text4");
+
+            result = (eval(str[1].value) - 2) * 2 + eval(str[2].value) * 2
+                + 4 * eval(str[3].value) + eval(str[4].value);
+
+            if (result > 0) { str[0].value = result; } else {
+                str[0].value = "请重新输入"
+            }
+
+
+        }
+        function reset()	//清除
+        {
+            str[0] = document.getElementById("output");
+            str[1] = document.getElementById("text1");
+            str[2] = document.getElementById("text2");
+            str[3] = document.getElementById("text3");
+            str[4] = document.getElementById("text4");
+
+            for (var i = 0; i < str.length; i++) {
+                str[i].value = '';
+            }
+        }
+    </script>
+
+    <style>
+        .shuru {
+            width: 1500px;
+        }
+
+        .butt {
+            transform: translate(650px, 90px);
+        }
+
+        .in {
+            width: 150px;
+            height: 40px;
+        }
+
+        .in:hover {
+            width: 170px;
+            height: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="calculator" class="caculator">
+        <div id="head">
+            <h3>小小英雄损失血量</h3>
+        </div><br>
+
+        <div id="show" align="center" class="shuru">
+            <span class="eql">
+                <input type="text" id="text1" class="in" value=0>
+                <img src="img/压缩.png" class="tubiao">阶段(>=3) <br><br>
+                <input type="text" id="text2" class="in" value=0>
+                <img src="img/鸡哥.png" class="tubiao">剩余普通棋子<br><br>
+                <input type="text" id="text3" class="in" value=0>
+                <img src="img/霞.png" class="tubiao">剩余龙神棋子<br><br>
+                <input type="text" id="text4" class="in" value=0>
+                <img src="img/传送门.png" class="tubiao">剩余召唤物
+
+
+            </span>
+
+
+
+            <span class="eql"><br><br><br><br>
+                &nbsp; &nbsp; &nbsp; &nbsp;===》
+                <input type="text" id="output" class="in" readonly="readongly">
+                <span class="eql"> 损失血量</span></span>
+
+        </div>
+
+        <div><span><input type="button" value="重置" onclick="reset()" class="butt"></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span><input type="button" value="转换" onclick="equals()" class="butt"></span>
+        </div>
+
+
+        <div id="box">
+            <div> <span><img src="img/官方.png" class="li"><a href="https://lol.qq.com/tft/#/index " target="_blank"
+                        id="link">云顶官方</a></span>
+                <span><img src="img/云顶公开赛.jpg " class=" li"><a href="https://toc.qq.com/" target="_blank"
+                        id="link">云顶公开赛</a></span>
+            </div>
+            <div>
+                <span><img src="img/godlike.webp" class="li"><a
+                        href="https://space.bilibili.com/388063772?spm_id_from=333.337.0.0" target="_blank"
+                        id="link">公式人，学点手法</a></span>
+
+                <span><img src="img/honglian.webp" class="li"><a
+                        href="https://space.bilibili.com/624967229?spm_id_from=333.337.0.0" target="_blank"
+                        id="link">乐子人，攒点狗运</a></span>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="title"><img src="img/logo-public.png" class="top"></div>
+        <div class="div_nav">
+            <ul>
+                <li>
+                    <a href="../caculator/page.html">标准计算器</a>
+                </li>
+                <li>
+                    <a href="../xiagu/hujia.html">召唤师峡谷</a>
+                    <ul class="second">
+                        <li><a href="../xiagu/hujia.html">护甲转换</a></li>
+                        <li><a href="../xiagu/mokang.html">魔抗转换</a></li>
+                        <li><a href="../xiagu/jinengjisu.html">技能极速转换</a></li>
+                        <li><a href="../xiagu/shuxing.html">装备面板属性价值</a></li>
+                        <li><a href="../xiagu/nanqiang.html">打野脏兵指南</a></li>
+                        <li><a href="../sudu/yidong.html">移动速度</a></li>
+                        <li><a href="../sudu/gongsu.html">攻击速度</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">云顶之弈</a>
+                    <ul class="second">
+                        <li><a href="../yunding/faqiu.html">法球价值</a></li>
+                        <li><a href="../yunding/kouxue.html">小小英雄血量损失</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../firstpage.html">返回主页面</a>
+                </li>
+            </ul>
+        </div>
+</body>
+
+</html>
